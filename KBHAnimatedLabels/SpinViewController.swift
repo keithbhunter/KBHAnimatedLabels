@@ -44,7 +44,7 @@ final class SpinViewController: UIViewController {
 final class SpinningLabel: KBHSpinningLabel {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        animate()
+        animateForDuration(2, numberOfTimes: 3)
     }
     
 }

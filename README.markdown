@@ -18,6 +18,8 @@ view.addSubview(flippingLabel)
 
 ## KBHSpinningLabel
 
+![Alt text](https://github.com/keithbhunter/KBHAnimatedLabels/blob/master/Images/Spin.gif "KBHSpinningLabel")
+
 Similar creation and animation to `KBHFlippingLabel`.
 
 ```
