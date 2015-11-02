@@ -26,8 +26,10 @@ final class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let textView = KBHFlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
-        view.addSubview(textView)
+        let flippingLabel = KBHFlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
+        flippingLabel.textColor = .whiteColor()
+        flippingLabel.font = .boldSystemFontOfSize(24)
+        view.addSubview(flippingLabel)
     }
 
 }
