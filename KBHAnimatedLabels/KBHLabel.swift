@@ -11,15 +11,23 @@ import UIKit
 public class KBHLabel: UIView {
     
     private var _labels = [UILabel]()
+    
+    /// A reference to each of the underlying labels. The separate labels can be referenced in order to allow for customization of each of the characters in the label.
     public var labels: [UILabel] { return _labels }
+    
+    /// The text displayed by the label.
     public var text: String {
         get { return getText() }
         set { setText(newValue) }
     }
+    
+    /// The color of the text. If all text is the same color, then textColor returns that color. If the text is multi-colored, textColor returns nil. In that case, use the labels property to read the textColor of each underlying label. Setting textColor will set the textColor of every underlying label.
     public var textColor: UIColor? {
         get { return getTextColor() }
         set { setTextColor(newValue) }
     }
+    
+    /// The font of the text. If all text is the same font, then font returns that font. If the text uses different font, font returns nil. In that case, use the labels property to read the font of each underlying label. Setting font will set the font of every underlying label.
     public var font: UIFont? {
         get { return getFont() }
         set { setFont(newValue) }

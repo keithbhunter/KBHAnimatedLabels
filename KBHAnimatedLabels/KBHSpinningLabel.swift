@@ -14,6 +14,7 @@ public class KBHSpinningLabel: KBHLabel {
         case Left, Right
     }
     
+    /// The direction that the text will spin when animated.
     public var direction: SpinDirection = .Right
     
     
@@ -35,7 +36,7 @@ public class KBHSpinningLabel: KBHLabel {
             spin.toValue = direction == .Right ? toValue : -(toValue)
             spin.duration = duration
             spin.timingFunction = timingFunction
-            spin.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10) // stagger animations so they don't all start at once
+            spin.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10)  // stagger animations so they don't all start at once
             spin.removedOnCompletion = removeOnCompletion
             labels[i].layer.addAnimation(spin, forKey: nil)
         }

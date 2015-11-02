@@ -11,9 +11,11 @@ import UIKit
 public class KBHFlippingLabel: KBHLabel {
     
     public enum FlipDirection {
-        case Vertical, Horizontal
+        case Vertical  // Flips over the x axis
+        case Horizontal  // Flips over the y axis
     }
 
+    /// The direction that the text will flip when animated.
     public var direction: FlipDirection = .Horizontal
 
     
