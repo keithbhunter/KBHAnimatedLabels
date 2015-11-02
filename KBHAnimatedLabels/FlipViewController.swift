@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class FlipViewController: UIViewController {
 
     private let darkBlueColor = UIColor(red: 35/255, green: 58/255, blue: 89/255, alpha: 1.0)
     private let lightBlueColor = UIColor(red: 71/255, green: 154/255, blue: 184/255, alpha: 1.0)
@@ -16,6 +16,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = AnimationsTableViewController.Animations.Flip.stringValue()
         
         let gradient = CAGradientLayer()
         gradient.colors = [lightBlueColor.CGColor, darkBlueColor.CGColor];
@@ -31,6 +32,10 @@ final class ViewController: UIViewController {
         flippingLabel.font = .boldSystemFontOfSize(24)
         flippingLabel.direction = .Horizontal
         view.addSubview(flippingLabel)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
 }

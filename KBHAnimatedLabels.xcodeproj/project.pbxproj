@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E73436AD1BE7935D00475C3E /* KBHSpinningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */; };
+		E73436AF1BE795A200475C3E /* AnimationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436AE1BE795A200475C3E /* AnimationsTableViewController.swift */; };
+		E73436B11BE7979A00475C3E /* SpinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436B01BE7979A00475C3E /* SpinViewController.swift */; };
 		E7F208821BE6EB1B00F7B05E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208811BE6EB1B00F7B05E /* AppDelegate.swift */; };
-		E7F208841BE6EB1B00F7B05E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208831BE6EB1B00F7B05E /* ViewController.swift */; };
+		E7F208841BE6EB1B00F7B05E /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */; };
 		E7F208871BE6EB1B00F7B05E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F208851BE6EB1B00F7B05E /* Main.storyboard */; };
 		E7F208891BE6EB1B00F7B05E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F208881BE6EB1B00F7B05E /* Assets.xcassets */; };
 		E7F2088C1BE6EB1B00F7B05E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F2088A1BE6EB1B00F7B05E /* LaunchScreen.storyboard */; };
@@ -38,9 +40,11 @@
 
 /* Begin PBXFileReference section */
 		E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHSpinningLabel.swift; sourceTree = "<group>"; };
+		E73436AE1BE795A200475C3E /* AnimationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationsTableViewController.swift; sourceTree = "<group>"; };
+		E73436B01BE7979A00475C3E /* SpinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinViewController.swift; sourceTree = "<group>"; };
 		E7F2087E1BE6EB1B00F7B05E /* KBHAnimatedLabels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBHAnimatedLabels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F208811BE6EB1B00F7B05E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7F208831BE6EB1B00F7B05E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
 		E7F208861BE6EB1B00F7B05E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7F208881BE6EB1B00F7B05E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7F2088B1BE6EB1B00F7B05E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,7 +147,9 @@
 		E7F208B01BE6EB5300F7B05E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7F208831BE6EB1B00F7B05E /* ViewController.swift */,
+				E73436AE1BE795A200475C3E /* AnimationsTableViewController.swift */,
+				E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */,
+				E73436B01BE7979A00475C3E /* SpinViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -298,7 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73436AD1BE7935D00475C3E /* KBHSpinningLabel.swift in Sources */,
-				E7F208841BE6EB1B00F7B05E /* ViewController.swift in Sources */,
+				E7F208841BE6EB1B00F7B05E /* FlipViewController.swift in Sources */,
+				E73436B11BE7979A00475C3E /* SpinViewController.swift in Sources */,
+				E73436AF1BE795A200475C3E /* AnimationsTableViewController.swift in Sources */,
 				E7F208B51BE6EBDD00F7B05E /* KBHLabel.swift in Sources */,
 				E7F208B61BE6EBDD00F7B05E /* KBHFlippingLabel.swift in Sources */,
 				E7F208821BE6EB1B00F7B05E /* AppDelegate.swift in Sources */,
