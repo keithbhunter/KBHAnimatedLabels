@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E73436AD1BE7935D00475C3E /* KBHSpinningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */; };
 		E7F208821BE6EB1B00F7B05E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208811BE6EB1B00F7B05E /* AppDelegate.swift */; };
 		E7F208841BE6EB1B00F7B05E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208831BE6EB1B00F7B05E /* ViewController.swift */; };
 		E7F208871BE6EB1B00F7B05E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F208851BE6EB1B00F7B05E /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHSpinningLabel.swift; sourceTree = "<group>"; };
 		E7F2087E1BE6EB1B00F7B05E /* KBHAnimatedLabels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBHAnimatedLabels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F208811BE6EB1B00F7B05E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F208831BE6EB1B00F7B05E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				E7F208B31BE6EBDD00F7B05E /* KBHLabel.swift */,
 				E7F208B41BE6EBDD00F7B05E /* KBHFlippingLabel.swift */,
+				E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73436AD1BE7935D00475C3E /* KBHSpinningLabel.swift in Sources */,
 				E7F208841BE6EB1B00F7B05E /* ViewController.swift in Sources */,
 				E7F208B51BE6EBDD00F7B05E /* KBHLabel.swift in Sources */,
 				E7F208B61BE6EBDD00F7B05E /* KBHFlippingLabel.swift in Sources */,
