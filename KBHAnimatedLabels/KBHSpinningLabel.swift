@@ -17,21 +17,26 @@ public class KBHSpinningLabel: KBHLabel {
     public var direction: SpinDirection = .Right
     
     
-    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
-        spinLabels()
+    // MARK: Animate
+    
+    public func animate() {
+        animateForDuration(1)
     }
     
-    private func spinLabels() {
+    public func animateForDuration(duration: Double, numberOfTimes: Int = 1, timingFunction: CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)) {
+        animateForDuration(duration, numberOfTimes: numberOfTimes, timingFunction: timingFunction, removeOnCompletion: true)
+    }
+    
+    private func animateForDuration(duration: Double, numberOfTimes: Int, timingFunction: CAMediaTimingFunction, removeOnCompletion: Bool) {
         for i in 0..<text.characters.count {
-            let toValue = 2 * M_PI
+            let toValue = Double(numberOfTimes) * 2 * M_PI
             let spin = CABasicAnimation(keyPath: "transform.rotation.z")
             spin.fromValue = 0
             spin.toValue = direction == .Right ? toValue : -(toValue)
-            spin.duration = 1
-            spin.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-            spin.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10)
-            spin.removedOnCompletion = true
+            spin.duration = duration
+            spin.timingFunction = timingFunction
+            spin.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10) // stagger animations so they don't all start at once
+            spin.removedOnCompletion = removeOnCompletion
             labels[i].layer.addAnimation(spin, forKey: nil)
         }
     }

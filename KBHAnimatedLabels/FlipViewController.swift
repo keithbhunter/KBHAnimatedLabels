@@ -27,7 +27,7 @@ final class FlipViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let flippingLabel = KBHFlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
+        let flippingLabel = FlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
         flippingLabel.textColor = .whiteColor()
         flippingLabel.font = .boldSystemFontOfSize(24)
         flippingLabel.direction = .Horizontal
@@ -38,5 +38,14 @@ final class FlipViewController: UIViewController {
         return true
     }
 
+}
+
+
+final class FlippingLabel: KBHFlippingLabel {
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        animate()
+    }
+    
 }
 

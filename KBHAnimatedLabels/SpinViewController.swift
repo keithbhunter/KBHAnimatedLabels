@@ -27,7 +27,7 @@ final class SpinViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let spinningLabel = KBHSpinningLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
+        let spinningLabel = SpinningLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
         spinningLabel.textColor = .whiteColor()
         spinningLabel.font = .boldSystemFontOfSize(24)
         spinningLabel.direction = .Right
@@ -39,3 +39,13 @@ final class SpinViewController: UIViewController {
     }
     
 }
+
+
+final class SpinningLabel: KBHSpinningLabel {
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        animate()
+    }
+    
+}
+
