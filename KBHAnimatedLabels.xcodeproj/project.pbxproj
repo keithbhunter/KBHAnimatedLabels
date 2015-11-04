@@ -13,6 +13,7 @@
 		E7B613811BE7BD7F00C1B738 /* KBHWaveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B613801BE7BD7F00C1B738 /* KBHWaveLabel.swift */; };
 		E7B613831BE7C09200C1B738 /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B613821BE7C09200C1B738 /* WaveViewController.swift */; };
 		E7BC2B861BEA933500FF663A /* KBHAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC2B851BEA933500FF663A /* KBHAnimatable.swift */; };
+		E7BC2B881BEA984500FF663A /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC2B871BEA984500FF663A /* AnimationViewController.swift */; };
 		E7F208821BE6EB1B00F7B05E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208811BE6EB1B00F7B05E /* AppDelegate.swift */; };
 		E7F208841BE6EB1B00F7B05E /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */; };
 		E7F208871BE6EB1B00F7B05E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F208851BE6EB1B00F7B05E /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		E7B613801BE7BD7F00C1B738 /* KBHWaveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHWaveLabel.swift; sourceTree = "<group>"; };
 		E7B613821BE7C09200C1B738 /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
 		E7BC2B851BEA933500FF663A /* KBHAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHAnimatable.swift; sourceTree = "<group>"; };
+		E7BC2B871BEA984500FF663A /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		E7F2087E1BE6EB1B00F7B05E /* KBHAnimatedLabels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBHAnimatedLabels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F208811BE6EB1B00F7B05E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E73436AE1BE795A200475C3E /* AnimationsTableViewController.swift */,
+				E7BC2B871BEA984500FF663A /* AnimationViewController.swift */,
 				E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */,
 				E73436B01BE7979A00475C3E /* SpinViewController.swift */,
 				E7B613821BE7C09200C1B738 /* WaveViewController.swift */,
@@ -317,6 +320,7 @@
 				E7F208841BE6EB1B00F7B05E /* FlipViewController.swift in Sources */,
 				E73436B11BE7979A00475C3E /* SpinViewController.swift in Sources */,
 				E73436AF1BE795A200475C3E /* AnimationsTableViewController.swift in Sources */,
+				E7BC2B881BEA984500FF663A /* AnimationViewController.swift in Sources */,
 				E7F208B51BE6EBDD00F7B05E /* KBHLabel.swift in Sources */,
 				E7B613831BE7C09200C1B738 /* WaveViewController.swift in Sources */,
 				E7F208B61BE6EBDD00F7B05E /* KBHFlippingLabel.swift in Sources */,

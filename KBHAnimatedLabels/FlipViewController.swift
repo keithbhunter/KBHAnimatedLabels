@@ -8,44 +8,26 @@
 
 import UIKit
 
-final class FlipViewController: UIViewController {
-
-    private let darkBlueColor = UIColor(red: 35/255, green: 58/255, blue: 89/255, alpha: 1.0)
-    private let lightBlueColor = UIColor(red: 71/255, green: 154/255, blue: 184/255, alpha: 1.0)
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = AnimationsTableViewController.Animations.Flip.stringValue()
-        
-        let gradient = CAGradientLayer()
-        gradient.colors = [lightBlueColor.CGColor, darkBlueColor.CGColor];
-        gradient.frame = view.frame
-        view.layer.insertSublayer(gradient, atIndex: 0)
-    }
+final class FlipViewController: AnimationViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let flippingLabel = FlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
+        let flippingLabel = KBHFlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
         flippingLabel.textColor = .whiteColor()
         flippingLabel.font = .boldSystemFontOfSize(24)
         flippingLabel.direction = .Horizontal
         view.addSubview(flippingLabel)
+        animatedLabel = flippingLabel
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-
-}
-
-
-final class FlippingLabel: KBHFlippingLabel {
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        animate()
+    override func colorsForGradient() -> [CGColor]? {
+        return [UIColor(red: 71/255, green: 154/255, blue: 184/255, alpha: 1.0).CGColor, UIColor(red: 35/255, green: 58/255, blue: 89/255, alpha: 1.0).CGColor]
     }
     
+    override func typeOfAnimation() -> AnimationsTableViewController.Animations {
+        return .Flip
+    }
+
 }
 

@@ -34,10 +34,6 @@ final class AnimationsTableViewController: UITableViewController {
         title = "Animations"
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return false
-    }
-    
     
     // MARK: Table View DataSource and Delegate
     
