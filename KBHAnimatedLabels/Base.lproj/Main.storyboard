@@ -5,6 +5,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
+        <!--Spring View Controller-->
+        <scene sceneID="aGB-xH-mCw">
+            <objects>
+                <viewController id="6pN-uj-a6h" customClass="SpringViewController" customModule="KBHAnimatedLabels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZ4-YP-wHc"/>
+                        <viewControllerLayoutGuide type="bottom" id="hSC-mJ-Roz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L2c-es-zub">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUQ-n0-5Ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="1126"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="bRW-bP-zfn">
             <objects>
@@ -19,11 +38,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sI5-BA-OEA" id="d32-UX-cTh">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VS1-Uc-cVF">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -45,6 +64,7 @@
                     <connections>
                         <segue destination="WFB-7d-4FK" kind="show" identifier="Flip" id="b1K-qt-xQh"/>
                         <segue destination="4kI-Cv-Hs3" kind="show" identifier="Spin" id="fPI-10-O4k"/>
+                        <segue destination="6pN-uj-a6h" kind="show" identifier="Spring" id="Mdm-S4-cnO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sb-rX-niV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIA-0B-zjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="90"/>
+            <point key="canvasLocation" x="1983" y="-189"/>
         </scene>
         <!--Spin View Controller-->
         <scene sceneID="ZMn-4j-fHS">
@@ -87,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8u-SM-RAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="765"/>
+            <point key="canvasLocation" x="1983" y="469"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cmn-oW-MNS">

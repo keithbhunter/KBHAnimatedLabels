@@ -13,12 +13,14 @@ final class AnimationsTableViewController: UITableViewController {
     enum Animations: Int {
         case Flip
         case Spin
+        case Spring
         case Total
         
         func stringValue() -> String {
             switch self {
             case Flip: return "Flip"
             case Spin: return "Spin"
+            case Spring: return "Spring"
             default: return "Total"
             }
         }
