@@ -10,10 +10,9 @@ import UIKit
 
 public class KBHLabel: UIView {
     
-    private var _labels = [UILabel]()
-    
     /// A reference to each of the underlying labels. The separate labels can be referenced in order to allow for customization of each of the characters in the label.
     public var labels: [UILabel] { return _labels }
+    private var _labels = [UILabel]()
     
     /// The text displayed by the label.
     public var text: String {
@@ -69,10 +68,8 @@ public class KBHLabel: UIView {
         if labels.count > 0 {
             color = labels[0].textColor
             
-            for i in 1..<labels.count {
-                if labels[i].textColor != color {
-                    return nil  // labels have different text colors; return nil
-                }
+            for i in 1..<labels.count where labels[i].textColor != color {
+                return nil  // labels have different text colors; return nil
             }
         }
         
@@ -80,10 +77,10 @@ public class KBHLabel: UIView {
     }
     
     private func setTextColor(textColor: UIColor?) {
-        if let textColor = textColor {
-            for label in labels {
-                label.textColor = textColor
-            }
+        guard let textColor = textColor else { return }
+        
+        for label in labels {
+            label.textColor = textColor
         }
         
         setNeedsDisplay()
@@ -95,10 +92,8 @@ public class KBHLabel: UIView {
         if labels.count > 0 {
             fnt = labels[0].font
             
-            for i in 1..<labels.count {
-                if labels[i].font != fnt {
-                    return nil  // labels have different text colors; return nil
-                }
+            for i in 1..<labels.count where labels[i].font != fnt {
+                return nil  // labels have different text colors; return nil
             }
         }
         
@@ -106,10 +101,10 @@ public class KBHLabel: UIView {
     }
     
     private func setFont(font: UIFont?) {
-        if let font = font {
-            for label in labels {
-                label.font = font
-            }
+        guard let font = font else { return }
+        
+        for label in labels {
+            label.font = font
         }
         
         setNeedsDisplay()
