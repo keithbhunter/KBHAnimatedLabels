@@ -2,33 +2,45 @@
 
 A collection of animated labels. 
 
-## KBHFlippingLabel
+## Usage
+
+Any label can be created with `init(frame:text:)` and added to the view hierarchy. The label can then be animated by calling `animate()`. Each label has different customization options, so see the code documentation or the specific usage section below to see what is available.
+
+### KBHLabel
+
+Each animated label inherits from `KBHLabel`. Here are the common custimization properties.
+* text
+* textColor
+* font
+
+### KBHFlippingLabel
 
 ![Alt text](https://github.com/keithbhunter/KBHAnimatedLabels/blob/master/Images/Flip.gif "KBHFlippingLabel")
 
-The label can be created with the following code and then animated with `animateForDuration()`. An example implementation would be to subclass `KBHFlippingLabel` and override `touchesBegan(_, withEvent:)` to animate the label anytime the label is touched.
+Customization Properties
+* direction
+* timingFunction
+* duration
+* numberOfFlips
 
-```
-let flippingLabel = KBHFlippingLabel(frame: /* Some frame */, text: "Some Text")
-flippingLabel.textColor = .whiteColor()
-flippingLabel.font = .boldSystemFontOfSize(24)
-flippingLabel.direction = .Horizontal
-view.addSubview(flippingLabel)
-``` 
-
-## KBHSpinningLabel
+### KBHSpinningLabel
 
 ![Alt text](https://github.com/keithbhunter/KBHAnimatedLabels/blob/master/Images/Spin.gif "KBHSpinningLabel")
 
-Similar creation and animation to `KBHFlippingLabel`.
+Customization Properties
+* direction
+* timingFunction
+* duration
+* numberOfSpins
 
-```
-let spinningLabel = SpinningLabel(frame: /* Some Frame */, text: "Some Text")
-spinningLabel.textColor = .whiteColor()
-spinningLabel.font = .boldSystemFontOfSize(24)
-spinningLabel.direction = .Right
-view.addSubview(spinningLabel)
-``` 
+### KBHWaveLabel
+
+![Alt text](https://github.com/keithbhunter/KBHAnimatedLabels/blob/master/Images/Wave.gif "KBHWaveLabel")
+
+Customization Properties
+* direction
+* damping
+* waveHeight
 
 ## License
 
