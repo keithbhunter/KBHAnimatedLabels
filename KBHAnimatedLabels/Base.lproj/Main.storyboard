@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Spring View Controller-->
+        <!--Wave View Controller-->
         <scene sceneID="aGB-xH-mCw">
             <objects>
-                <viewController id="6pN-uj-a6h" customClass="SpringViewController" customModule="KBHAnimatedLabels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6pN-uj-a6h" customClass="WaveViewController" customModule="KBHAnimatedLabels" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZ4-YP-wHc"/>
                         <viewControllerLayoutGuide type="bottom" id="hSC-mJ-Roz"/>
@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -64,7 +64,7 @@
                     <connections>
                         <segue destination="WFB-7d-4FK" kind="show" identifier="Flip" id="b1K-qt-xQh"/>
                         <segue destination="4kI-Cv-Hs3" kind="show" identifier="Spin" id="fPI-10-O4k"/>
-                        <segue destination="6pN-uj-a6h" kind="show" identifier="Spring" id="Mdm-S4-cnO"/>
+                        <segue destination="6pN-uj-a6h" kind="show" identifier="Wave" id="Mdm-S4-cnO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sb-rX-niV" userLabel="First Responder" sceneMemberID="firstResponder"/>

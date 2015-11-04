@@ -8,37 +8,39 @@
 
 import UIKit
 
-public class KBHFlippingLabel: KBHLabel {
+public class KBHFlippingLabel: KBHLabel, KBHAnimatable {
     
     public enum FlipDirection {
         case Vertical  // Flips over the x axis
         case Horizontal  // Flips over the y axis
     }
 
-    /// The direction that the text will flip when animated.
+    /// The direction that the text will flip when animated. Defaults to Horizontal.
     public var direction: FlipDirection = .Horizontal
+    
+    /// A timing function for the animation to use. Defaults to kCAMediaTimingFunctionDefault.
+    public var timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+    
+    /// Total time the flip animation will take. Defaults to 1 second.
+    public var duration: CFTimeInterval = 1
+    
+    /// The number of times each letter will spin during the duration. This number must be greater than 0. Defaults to 1.
+    public var numberOfFlips: Int = 1
 
     
     // MARK: Animate
     
     public func animate() {
-        animateForDuration(1)
-    }
-    
-    public func animateForDuration(duration: Double, numberOfTimes: Int = 1, timingFunction: CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)) {
-        animateForDuration(duration, numberOfTimes: numberOfTimes, timingFunction: timingFunction, removeOnCompletion: true)
-    }
-    
-    private func animateForDuration(duration: Double, numberOfTimes: Int, timingFunction: CAMediaTimingFunction, removeOnCompletion: Bool) {
+        guard numberOfFlips > 0 else { return }
+        
         for i in 0..<text.characters.count {
             let keyPath = direction == .Horizontal ? "transform.rotation.y" : "transform.rotation.x"
             let flip = CABasicAnimation(keyPath: keyPath)
             flip.fromValue = 0
-            flip.toValue = Double(numberOfTimes) * 2 * M_PI
+            flip.toValue = Double(numberOfFlips) * 2 * M_PI
             flip.duration = duration
             flip.timingFunction = timingFunction
             flip.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10)  // stagger animations so they don't all start at once
-            flip.removedOnCompletion = removeOnCompletion
             labels[i].layer.addAnimation(flip, forKey: nil)
         }
     }

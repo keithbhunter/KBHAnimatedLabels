@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SpringViewController: UIViewController {
+final class WaveViewController: UIViewController {
     
     private let darkOrangeColor = UIColor(red: 241/255, green: 81/255, blue: 45/255, alpha: 1.0)
     private let lightOrangeColor = UIColor(red: 242/255, green: 159/255, blue: 55/255, alpha: 1.0)
@@ -16,7 +16,7 @@ final class SpringViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = AnimationsTableViewController.Animations.Spring.stringValue()
+        title = AnimationsTableViewController.Animations.Wave.stringValue()
         
         let gradient = CAGradientLayer()
         gradient.colors = [lightOrangeColor.CGColor, darkOrangeColor.CGColor];
