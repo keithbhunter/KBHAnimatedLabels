@@ -16,17 +16,11 @@ class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = typeOfAnimation().stringValue()
-        
-        if let colors = colorsForGradient() {
-            let gradient = CAGradientLayer()
-            gradient.colors = colors
-            gradient.frame = view.frame
-            view.layer.insertSublayer(gradient, atIndex: 0)
-        }
+        view.backgroundColor = colorForBackground()
     }
     
-    func colorsForGradient() -> [CGColor]? {
-        return nil
+    func colorForBackground() -> UIColor {
+        return .whiteColor()
     }
     
     func typeOfAnimation() -> AnimationsTableViewController.Animations {

@@ -20,8 +20,8 @@ final class WaveViewController: AnimationViewController {
         animatedLabel = waveLabel
     }
     
-    override func colorsForGradient() -> [CGColor]? {
-        return [UIColor(red: 242/255, green: 159/255, blue: 55/255, alpha: 1.0).CGColor, UIColor(red: 241/255, green: 81/255, blue: 45/255, alpha: 1.0).CGColor]
+    override func colorForBackground() -> UIColor {
+        return UIColor(red: 242/255, green: 159/255, blue: 55/255, alpha: 1.0)
     }
     
     override func typeOfAnimation() -> AnimationsTableViewController.Animations {

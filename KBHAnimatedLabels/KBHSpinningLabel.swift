@@ -15,6 +15,10 @@ public class KBHSpinningLabel: KBHLabel, KBHAnimatable {
     }
     
     
+    /// True if the label is animating; false otherwise.
+    public var isAnimating: Bool { return _isAnimating }
+    private var _isAnimating = false
+    
     /// The direction that the text will spin when animated. Defaults to Right.
     public var direction: SpinDirection = .Right
     
@@ -27,11 +31,14 @@ public class KBHSpinningLabel: KBHLabel, KBHAnimatable {
     /// The number of times each letter will spin during the duration. This number must be greater than 0. Defaults to 1.
     public var numberOfSpins: Int = 1
     
+    private let indexKey = "index"
+    
     
     // MARK: Animate
     
     public func animate() {
-        guard numberOfSpins > 0 else { return }
+        guard numberOfSpins > 0 && !_isAnimating else { return }
+        _isAnimating = true
         
         for i in 0..<text.characters.count {
             let toValue = Double(numberOfSpins) * 2 * M_PI
@@ -41,7 +48,18 @@ public class KBHSpinningLabel: KBHLabel, KBHAnimatable {
             spin.duration = duration
             spin.timingFunction = timingFunction
             spin.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10)  // stagger animations so they don't all start at once
+            spin.setValue(i, forKey: animationKey + indexKey)
+            spin.delegate = self
             labels[i].layer.addAnimation(spin, forKey: nil)
+        }
+    }
+    
+    public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        guard let i = anim.valueForKey(animationKey + indexKey) as? Int else { return }
+        
+        // the animation on the last label finished
+        if i == labels.count - 1 {
+            _isAnimating = false
         }
     }
     

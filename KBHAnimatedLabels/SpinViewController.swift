@@ -21,8 +21,8 @@ final class SpinViewController: AnimationViewController {
         animatedLabel = spinningLabel
     }
     
-    override func colorsForGradient() -> [CGColor]? {
-        return [UIColor(red: 251/255, green: 131/255, blue: 150/255, alpha: 1.0).CGColor, UIColor(red: 231/255, green: 77/255, blue: 111/255, alpha: 1.0).CGColor]
+    override func colorForBackground() -> UIColor {
+        return UIColor(red: 251/255, green: 131/255, blue: 150/255, alpha: 1.0)
     }
     
     override func typeOfAnimation() -> AnimationsTableViewController.Animations {

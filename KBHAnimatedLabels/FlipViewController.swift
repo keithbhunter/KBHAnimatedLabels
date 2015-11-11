@@ -21,8 +21,8 @@ final class FlipViewController: AnimationViewController {
         animatedLabel = flippingLabel
     }
     
-    override func colorsForGradient() -> [CGColor]? {
-        return [UIColor(red: 71/255, green: 154/255, blue: 184/255, alpha: 1.0).CGColor, UIColor(red: 35/255, green: 58/255, blue: 89/255, alpha: 1.0).CGColor]
+    override func colorForBackground() -> UIColor {
+        return UIColor(red: 71/255, green: 154/255, blue: 184/255, alpha: 1.0)
     }
     
     override func typeOfAnimation() -> AnimationsTableViewController.Animations {
