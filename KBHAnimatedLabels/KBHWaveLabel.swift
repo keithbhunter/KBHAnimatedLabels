@@ -22,7 +22,7 @@ public class KBHWaveLabel: KBHLabel, KBHAnimatable {
     private var originalFrames = [CGRect]()
     
     /// The direction the wave flows through the text. Defaults to Right.
-    public var direction: WaveDirection = .Right
+    public var waveDirection: WaveDirection = .Right
     
     /// The damping factor in the wave animation. Must be greater than or equal to 0. Higher numbers make the wave less spring-like. Defaults to 500.
     public var damping: CGFloat = 500
@@ -30,7 +30,7 @@ public class KBHWaveLabel: KBHLabel, KBHAnimatable {
     /// The height of the wave. Defaults to 25.
     public var waveHeight: CGFloat = 25
     
-    private let indexKey = "index"
+    private let waveKey = "wave"
     
     
     // MARK: Animate
@@ -49,7 +49,7 @@ public class KBHWaveLabel: KBHLabel, KBHAnimatable {
         
         for i in 0..<text.characters.count {
             let label = self.labels[i]
-            let delay = direction == .Right ? Double(i) / 10 : abs(Double(i - text.characters.count)) / 10  // controls left/right flow
+            let delay = waveDirection == .Right ? Double(i) / 10 : abs(Double(i - text.characters.count)) / 10  // controls left/right flow
             
             // stagger animations with delay so they don't all start at once
             UIView.animateWithDuration(0.1, delay: delay, options: [.CurveEaseOut], animations: { () -> Void in
@@ -62,7 +62,7 @@ public class KBHWaveLabel: KBHLabel, KBHAnimatable {
                 wave.fromValue = label.layer.position.y
                 wave.toValue = label.layer.position.y + self.waveHeight
                 wave.duration = wave.settlingDuration
-                wave.setValue(i, forKey: self.animationKey + self.indexKey)
+                wave.setValue(i, forKey: self.animationKey + self.waveKey)
                 wave.delegate = self
                 label.layer.addAnimation(wave, forKey: nil)
                 label.frame = self.originalFrames[i]
@@ -71,10 +71,8 @@ public class KBHWaveLabel: KBHLabel, KBHAnimatable {
     }
     
     public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        guard let i = anim.valueForKey(animationKey + indexKey) as? Int else { return }
-        
-        // the animation on the last label finished
-        if i == labels.count - 1 {
+        if let i = anim.valueForKey(animationKey + waveKey) as? Int where i == labels.count - 1 {
+            // the animation on the last label finished
             _isAnimating = false
         }
     }

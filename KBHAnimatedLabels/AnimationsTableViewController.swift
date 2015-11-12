@@ -13,6 +13,7 @@ final class AnimationsTableViewController: UITableViewController {
     enum Animations: Int {
         case Flip
         case Spin
+        case Spring
         case Wave
         case Total
         
@@ -21,6 +22,7 @@ final class AnimationsTableViewController: UITableViewController {
             case Flip: return "Flip"
             case Spin: return "Spin"
             case Wave: return "Wave"
+            case Spring: return "Spring"
             default: return "Total"
             }
         }

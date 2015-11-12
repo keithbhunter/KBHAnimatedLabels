@@ -21,7 +21,7 @@ public class KBHFlippingLabel: KBHLabel, KBHAnimatable {
     private var _isAnimating = false
 
     /// The direction that the text will flip when animated. Defaults to Horizontal.
-    public var direction: FlipDirection = .Horizontal
+    public var flipDirection: FlipDirection = .Horizontal
     
     /// A timing function for the animation to use. Defaults to kCAMediaTimingFunctionDefault.
     public var timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
@@ -32,7 +32,7 @@ public class KBHFlippingLabel: KBHLabel, KBHAnimatable {
     /// The number of times each letter will spin during the duration. This number must be greater than 0. Defaults to 1.
     public var numberOfFlips: Int = 1
     
-    private let indexKey = "index"
+    private let flipKey = "flip"
 
     
     // MARK: Animate
@@ -40,26 +40,24 @@ public class KBHFlippingLabel: KBHLabel, KBHAnimatable {
     public func animate() {
         guard numberOfFlips > 0 && !_isAnimating else { return }
         _isAnimating = true
-        
+
         for i in 0..<text.characters.count {
-            let keyPath = direction == .Horizontal ? "transform.rotation.y" : "transform.rotation.x"
+            let keyPath = flipDirection == .Horizontal ? "transform.rotation.y" : "transform.rotation.x"
             let flip = CABasicAnimation(keyPath: keyPath)
             flip.fromValue = 0
             flip.toValue = Double(numberOfFlips) * 2 * M_PI
             flip.duration = duration
             flip.timingFunction = timingFunction
             flip.beginTime = CACurrentMediaTime() + (CFTimeInterval(i) / 10)  // stagger animations so they don't all start at once
-            flip.setValue(i, forKey: animationKey + indexKey)
+            flip.setValue(i, forKey: animationKey + flipKey)
             flip.delegate = self
             labels[i].layer.addAnimation(flip, forKey: nil)
         }
     }
     
     public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        guard let i = anim.valueForKey(animationKey + indexKey) as? Int else { return }
-        
-        // the animation on the last label finished
-        if i == labels.count - 1 {
+        if let i = anim.valueForKey(animationKey + flipKey) as? Int where i == labels.count - 1 {
+            // the animation on the last label finished
             _isAnimating = false
         }
     }

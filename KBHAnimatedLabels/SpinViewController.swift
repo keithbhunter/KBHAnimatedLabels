@@ -16,7 +16,7 @@ final class SpinViewController: AnimationViewController {
         let spinningLabel = KBHSpinningLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
         spinningLabel.textColor = .whiteColor()
         spinningLabel.font = .boldSystemFontOfSize(24)
-        spinningLabel.direction = .Right
+        spinningLabel.spinDirection = .Right
         view.addSubview(spinningLabel)
         animatedLabel = spinningLabel
     }

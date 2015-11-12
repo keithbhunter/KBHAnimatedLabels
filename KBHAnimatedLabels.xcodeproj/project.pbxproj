@@ -10,6 +10,8 @@
 		E73436AD1BE7935D00475C3E /* KBHSpinningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */; };
 		E73436AF1BE795A200475C3E /* AnimationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436AE1BE795A200475C3E /* AnimationsTableViewController.swift */; };
 		E73436B11BE7979A00475C3E /* SpinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73436B01BE7979A00475C3E /* SpinViewController.swift */; };
+		E7846D921BF4EBE8002D19ED /* KBHSpringingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7846D911BF4EBE8002D19ED /* KBHSpringingLabel.swift */; };
+		E7846D941BF4EE2C002D19ED /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7846D931BF4EE2C002D19ED /* SpringViewController.swift */; };
 		E7B613811BE7BD7F00C1B738 /* KBHWaveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B613801BE7BD7F00C1B738 /* KBHWaveLabel.swift */; };
 		E7B613831BE7C09200C1B738 /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B613821BE7C09200C1B738 /* WaveViewController.swift */; };
 		E7BC2B861BEA933500FF663A /* KBHAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC2B851BEA933500FF663A /* KBHAnimatable.swift */; };
@@ -46,6 +48,8 @@
 		E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHSpinningLabel.swift; sourceTree = "<group>"; };
 		E73436AE1BE795A200475C3E /* AnimationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationsTableViewController.swift; sourceTree = "<group>"; };
 		E73436B01BE7979A00475C3E /* SpinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinViewController.swift; sourceTree = "<group>"; };
+		E7846D911BF4EBE8002D19ED /* KBHSpringingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHSpringingLabel.swift; sourceTree = "<group>"; };
+		E7846D931BF4EE2C002D19ED /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
 		E7B613801BE7BD7F00C1B738 /* KBHWaveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHWaveLabel.swift; sourceTree = "<group>"; };
 		E7B613821BE7C09200C1B738 /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
 		E7BC2B851BEA933500FF663A /* KBHAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBHAnimatable.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				E7BC2B851BEA933500FF663A /* KBHAnimatable.swift */,
 				E7F208B41BE6EBDD00F7B05E /* KBHFlippingLabel.swift */,
 				E73436AC1BE7935D00475C3E /* KBHSpinningLabel.swift */,
+				E7846D911BF4EBE8002D19ED /* KBHSpringingLabel.swift */,
 				E7B613801BE7BD7F00C1B738 /* KBHWaveLabel.swift */,
 			);
 			name = Classes;
@@ -161,6 +166,7 @@
 				E7BC2B871BEA984500FF663A /* AnimationViewController.swift */,
 				E7F208831BE6EB1B00F7B05E /* FlipViewController.swift */,
 				E73436B01BE7979A00475C3E /* SpinViewController.swift */,
+				E7846D931BF4EE2C002D19ED /* SpringViewController.swift */,
 				E7B613821BE7C09200C1B738 /* WaveViewController.swift */,
 			);
 			name = Controllers;
@@ -316,6 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73436AD1BE7935D00475C3E /* KBHSpinningLabel.swift in Sources */,
+				E7846D941BF4EE2C002D19ED /* SpringViewController.swift in Sources */,
+				E7846D921BF4EBE8002D19ED /* KBHSpringingLabel.swift in Sources */,
 				E7BC2B861BEA933500FF663A /* KBHAnimatable.swift in Sources */,
 				E7F208841BE6EB1B00F7B05E /* FlipViewController.swift in Sources */,
 				E73436B11BE7979A00475C3E /* SpinViewController.swift in Sources */,

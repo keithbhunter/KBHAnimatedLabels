@@ -16,7 +16,7 @@ final class FlipViewController: AnimationViewController {
         let flippingLabel = KBHFlippingLabel(frame: CGRectMake(8, 8, view.frame.size.width - 16, view.frame.size.height - 16), text: "Some Text")
         flippingLabel.textColor = .whiteColor()
         flippingLabel.font = .boldSystemFontOfSize(24)
-        flippingLabel.direction = .Horizontal
+        flippingLabel.flipDirection = .Horizontal
         view.addSubview(flippingLabel)
         animatedLabel = flippingLabel
     }

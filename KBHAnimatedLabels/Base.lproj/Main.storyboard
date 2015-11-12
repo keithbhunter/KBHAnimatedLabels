@@ -5,6 +5,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
+        <!--Spring View Controller-->
+        <scene sceneID="l4k-Zv-Ile">
+            <objects>
+                <viewController id="8Lj-CH-O72" customClass="SpringViewController" customModule="KBHAnimatedLabels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SHZ-g5-5hX"/>
+                        <viewControllerLayoutGuide type="bottom" id="hd5-8L-jzv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sl8-nf-pKK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzc-eX-FKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="1178"/>
+        </scene>
         <!--Wave View Controller-->
         <scene sceneID="aGB-xH-mCw">
             <objects>
@@ -22,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUQ-n0-5Ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="1126"/>
+            <point key="canvasLocation" x="1983" y="1874"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="bRW-bP-zfn">
@@ -65,6 +84,7 @@
                         <segue destination="WFB-7d-4FK" kind="show" identifier="Flip" id="b1K-qt-xQh"/>
                         <segue destination="4kI-Cv-Hs3" kind="show" identifier="Spin" id="fPI-10-O4k"/>
                         <segue destination="6pN-uj-a6h" kind="show" identifier="Wave" id="Mdm-S4-cnO"/>
+                        <segue destination="8Lj-CH-O72" kind="show" identifier="Spring" id="Bp0-gH-HH8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sb-rX-niV" userLabel="First Responder" sceneMemberID="firstResponder"/>
